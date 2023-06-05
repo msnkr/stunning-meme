@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+:root {
+  --darkest: #393646;
+  --darker: #4f4557;
+  --light: #6d5d6e;
+  --lightest: #f4eee0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-transform: capitalize;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  font-size: 44px;
+  background-color: var(--darker);
+  position: relative;
+}
+
+.logo img {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.fa-github {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes pulse {
+  from {
+    color: var(--light);
+  }
+  to {
+    color: var(--lightest);
+  }
+}
+
+.container span {
+  display: block;
+  color: var(--lightest);
+  position: relative;
+}
+
+.container span.coming,
+.container span.soon {
+  color: var(--light);
+  transition: color 1s ease-in-out;
+}
+
+.small-text {
+  font-size: 11px;
+  color: var(--light);
+  padding: 10px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  background-color: var(--lightest);
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  color: var(--darkest);
+  text-transform: none;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: var(--lightest);
+  margin-top: 20px;
+  transition: background-color 1s ease-in-out;
+}
+
+.input-message textarea {
+  width: 400px;
+}
+
+.btn:hover {
+  background-color: var(--light);
+}
+
+.container.thank-you {
+  padding: 30%;
+  color: var(--lightest);
+  font-size: 36px;
+}
